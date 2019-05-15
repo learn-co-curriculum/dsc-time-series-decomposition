@@ -65,7 +65,7 @@ ts.plot(figsize=(10,4), color="blue");
 ```
 
 
-![png](index_files/index_2_0.png)
+![png](index_files/index_1_0.png)
 
 
 ## Decomposing
@@ -82,7 +82,7 @@ Time series decomposition is a mathematical procedure which transforms a time se
 
 To achieve successful decomposition, it is important to choose between the additive and multiplicative models, which requires analyzing the series. For example, does the magnitude of the seasonality increase when the time series increases?
 
-![](http://kourentzes.com/forecasting/wp-content/uploads/2014/11/mseas.fig1_.png)
+![](images/seasonality.png)
 
 
 Fortunately, `statsmodels` provides the convenient `seasonal_decompose` function to perform such decomposition out of the box. Details of this function are available [here](http://www.statsmodels.org/dev/generated/statsmodels.tsa.seasonal.seasonal_decompose.html). 
@@ -121,7 +121,7 @@ plt.tight_layout()
 ```
 
 
-![png](index_files/index_4_0.png)
+![png](index_files/index_3_0.png)
 
 
 Here we can see that the trend, seasonality are separated out from data and we can model the residuals.
@@ -143,7 +143,7 @@ stationarity_check(ts_log_decompose)
 ```
 
 
-![png](index_files/index_6_0.png)
+![png](index_files/index_5_0.png)
 
 
     Results of Dickey-Fuller Test:
@@ -164,4 +164,4 @@ The Dickey-Fuller test statistic is significant and very well below a (strict) 0
 We strongly recommend you to read this blogpost on [decomposing time series](https://machinelearningmastery.com/decompose-time-series-data-trend-seasonality/)!
 
 ## Summary
-In this lesson, we saw how to remove both trend and seasonality from a time-series using time series decomposition. We saw how decoposition allows us to better model the time-series for further analysis. you are now ready to perform predictive analyses and modeling with time-series data!
+In this lesson, we saw how to remove both trend and seasonality from a time-series using time series decomposition. We saw how decomposition allows us to better model the time-series for further analysis. you are now ready to perform predictive analyses and modeling with time-series data!
