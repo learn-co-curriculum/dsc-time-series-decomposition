@@ -82,7 +82,7 @@ Time series decomposition is a mathematical procedure which transforms a time se
 
 To achieve successful decomposition, it is important to choose between the additive and multiplicative models, which requires analyzing the series. For example, does the magnitude of the seasonality increase when the time series increases?
 
-![](images/seasonality.png)
+![](images/new_seasonality.png)
 
 
 Fortunately, `statsmodels` provides the convenient `seasonal_decompose` function to perform such decomposition out of the box. Details of this function are available [here](http://www.statsmodels.org/dev/generated/statsmodels.tsa.seasonal.seasonal_decompose.html). 
