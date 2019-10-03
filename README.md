@@ -70,9 +70,9 @@ ts.plot(figsize=(10,4), color="blue");
 
 ## Decomposing
 
-Time series decomposition is a mathematical procedure which transforms a time series into multiple different time series. The original time series is often split into 3 component series:
+Time series decomposition is a mathematical procedure that transforms a time series into multiple different time series. The original time series is often split into 3 component series:
 
->Seasonal: Patterns that repeat with a fixed period of time. For example, a website might receive more visits during weekends; this would produce data with a seasonality of 7 days.
+>Seasonal: Patterns that repeat within a fixed period. For example, a website might receive more visits during weekends; this would produce data with a seasonality of 7 days.
 
 >Trend: The underlying trend of the metrics. A website increasing in popularity should show a general trend that goes up.
 
@@ -87,7 +87,7 @@ To achieve successful decomposition, it is important to choose between the addit
 
 Fortunately, `statsmodels` provides the convenient `seasonal_decompose` function to perform such decomposition out of the box. Details of this function are available [here](http://www.statsmodels.org/dev/generated/statsmodels.tsa.seasonal.seasonal_decompose.html). 
 
-Let's use this function to perform following tasks:
+Let's use this function to perform the following tasks:
 1. Import `seasonal_decompose` from statsmodels.
 2. Apply `seasonal_decompose` to log transformed TS. 
 3. Plot the trend, seasonality and residual. 
@@ -124,9 +124,9 @@ plt.tight_layout()
 ![png](index_files/index_3_0.png)
 
 
-Here we can see that the trend, seasonality are separated out from data and we can model the residuals.
+Here we can see that the trend and seasonality are separated from data and we can model the residuals.
 
-Using time-series decomposition makes it easier to quickly identify a changing mean or variation in the data. The plot above clearly shows the upwards trend of our data, along with its yearly seasonality. These can be used to understand the structure of our time-series. The intuition behind time-series decomposition is important, as many forecasting methods build upon this concept of structured decomposition to produce forecasts.
+Using time-series decomposition makes it easier to quickly identify a changing mean or variation in the data. The plot above clearly shows the upward trend of our data, along with its yearly seasonality. These can be used to understand the structure of our time-series. The intuition behind time-series decomposition is important, as many forecasting methods build upon this concept of structured decomposition to produce forecasts.
 
 Lets check stationarity of residuals using our `check_stationarity()` function.
 
