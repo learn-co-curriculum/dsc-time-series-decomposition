@@ -34,7 +34,7 @@ def stationarity_check(TS):
     roll_std = TS.rolling(window=8, center=False).std()
     
     # Perform the Dickey Fuller test
-    dftest = adfuller(TS['#Passengers']) 
+    dftest = adfuller(TS) 
     
     # Plot rolling statistics:
     fig = plt.figure(figsize=(12,6))
